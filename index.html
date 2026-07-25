@@ -479,11 +479,7 @@
                 for (let i = 0; i < 20; i++) hearts.push(new HeartParticle());
             });
 
-            document.querySelectorAll('button').forEach(b => {
-                b.addEventListener('touchstart', (e) => {
-                    e.preventDefault();
-                }, { passive: false });
-            });
+            // removed touchstart preventDefault to allow click events on mobile
 
             setTimeout(() => {
                 for (let i = 0; i < 15; i++) hearts.push(new HeartParticle());
